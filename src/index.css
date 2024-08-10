@@ -11,3 +11,55 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.imageStyle {
+  width: 100%;
+  height: 100%;  
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+
+.ProductCardContainer {
+  position: relative;
+  margin-bottom: 50px; /* Додаємо місце під карткою для кнопки */
+}
+
+.ProductCard {
+  position: relative;
+}
+
+.buy-button-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Темний фон для контрасту */
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, top 0.3s ease;
+  border-radius: 6px;
+}
+
+.buy-button{
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.buy-button:hover{
+  color: black !important;
+  border: 2px solid black !important;
+}
+
+.ProductCardContainer:hover .buy-button-container {
+  opacity: 1;
+  top: calc(100% + 10px); 
+}
+
+
